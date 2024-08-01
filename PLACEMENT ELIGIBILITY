@@ -1,0 +1,26 @@
+
+import java.util.Scanner;
+class Sumoddeven {
+    public static void main(String[] args) {
+        int att;
+        float cgpa;
+        int arrear;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the attendance percentage:");
+        att = sc.nextInt();
+        System.out.println("Enter the CGPA:");
+        cgpa = sc.nextFloat();
+        System.out.println("Enter the number of arrears:");
+        arrear = sc.nextInt();
+        if(att>75&& cgpa>7.5 && arrear<=0){
+            System.out.println("you are eligible");
+        }
+        else if(att>80 && cgpa>7.0 && arrear<=2){
+            System.out.println("you are eligible");
+            
+        }
+        else{
+           System.out.println("you are  not eligible"); 
+        }
+    }
+}
