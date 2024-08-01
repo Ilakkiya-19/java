@@ -1,0 +1,25 @@
+import java.util.Scanner;
+class Sumoddeven {
+    public static void main(String[] args) {
+        int odd=0;
+        int even=0;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the phone number");
+        int num=sc.nextInt();
+        while(num>0)
+        {
+            int digit=num%10;
+            num=num/10;
+            if(digit%2==0)
+            {
+                even+=digit;
+            }
+            else
+            {
+                odd+=digit;
+            }
+        }
+            System.out.println("sum of even numbers"+even);
+            System.out.println("sum of odd numbers"+odd);
+    }
+}
