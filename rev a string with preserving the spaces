@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class ReverseString {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Read the input string
+        System.out.print("Enter a string: ");
+        String input = scanner.nextLine();
+        
+        // Reverse the entire string
+        String reversed = new StringBuilder(input).reverse().toString();
+        
+        // Print the reversed string
+        System.out.println(reversed);
+        
+        scanner.close();
+    }
+}
+
+
+
+logic:
+
+new StringBuilder(input):
+
+This creates a new StringBuilder object initialized with the input string.
+StringBuilder is a class in Java that provides a mutable sequence of characters. Unlike String, which is immutable, StringBuilder allows you to modify the sequence without creating new objects.
+.reverse():
+
+This method is called on the StringBuilder instance.
+The reverse() method reverses the sequence of characters in the StringBuilder object.
+It modifies the StringBuilder instance in place, so after this method is called, the characters are in reverse order compared to their original sequence.
+.toString():
+
+This method converts the StringBuilder object back to a String.
+After reversing the characters, you use toString() to obtain a String representation of the reversed sequence.
+Summary
+Initialization: new StringBuilder(input) creates a StringBuilder object with the contents of the input string.
+Reversal: .reverse() reverses the characters in the StringBuilder.
+Conversion: .toString() converts the reversed StringBuilder back to a String.
