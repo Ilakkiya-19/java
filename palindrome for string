@@ -1,0 +1,35 @@
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter a string:");
+        String str=sc.nextLine();
+        
+        int length=str.length();
+        String rev="";// dont give extra space for " "
+        for(int i=length-1;i>=0;i--){
+            rev+=str.charAt(i);
+        }
+        if(str.equals(rev)){
+            System.out.println("palindrome");
+        }
+        else{
+            System.out.println("not a palindrome");
+        }
+        
+    }
+}
+
+// ERRORS I GOT
+//1. Changed String reversed = " "; to String reversed = "";. This avoids adding an unwanted space at the beginning of the reversed string.
+//When comparing "racecar" with " racecar", they are not equal due to the leading space, and the program will incorrectly determine that "racecar" is not a palindrome.
+
+// 2. why not str==rev?
+//Understanding == vs .equals()
+//Reference Equality (==):
+//The == operator checks if two references point to the same object in memory. It does not compare the actual content of the strings.
+//For strings, this means str == rev will only be true if str and rev reference the exact same String object.
+//Content Equality (.equals()):
+
+//The .equals() method checks if two strings have the same content. It compares the characters in the strings and returns true if they are identical.
+//For strings, you should use str.equals(rev) to determine if the content of str and rev is the same.
