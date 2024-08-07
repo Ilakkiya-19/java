@@ -1,0 +1,50 @@
+import java.util.*;
+public class Main{
+    public static void main(String[] arg){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the starting number:");
+        int m=sc.nextInt();
+        System.out.println("Enter the ending number:");
+        int n=sc.nextInt();
+        System.out.println("Enter the skipping number:");
+        int k=sc.nextInt();
+        while(m<=n){
+            if(m==k){
+                m++;
+                continue;
+            }
+            System.out.println(m);
+            m++;
+        }
+
+    }
+}  //i/p: 1 to 5 skip-3, o/p: 1,2,4,5
+
+
+//TYPE-2
+
+import java.util.*;
+public class Main{
+    public static void main(String[] arg){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the starting number:");
+        int m=sc.nextInt();
+        System.out.println("Enter the ending number:");
+        int n=sc.nextInt();
+        System.out.println("Enter the skipping number:");
+        int k=sc.nextInt();
+        int count=0;
+        while(m<=n){
+            if(count%(k+1)==0){
+                System.out.println(m+" ");
+            }
+            count++;
+            m++;
+            
+        }
+
+    }
+}
+
+
+//i/p :1 to 5 skip: 2 num in between o/p: 1,4
