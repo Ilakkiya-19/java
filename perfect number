@@ -1,0 +1,30 @@
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        System.out.println("Enter the number:");
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int sum=0;
+        for(int i=1;i<n;i++)
+        {
+            if(n%i==0){
+
+                System.out.println(i);
+                sum=sum+i;
+
+            }
+        }
+        if(sum==n)
+        {
+            System.out.println("It is a perfect number");
+        }
+        else{
+            System.out.println("It is a not perfect number");
+        }
+    }
+}
+
+// eg=1+2+3=6
+//Inside the loop, the if statement checks if i is a divisor of n. This is done using the modulo operation (%). 
+//The expression n % i computes the remainder when n is divided by i. If n % i equals 0, it means that i is a divisor of n.
+// print the sum+i-eg:1+2+3
