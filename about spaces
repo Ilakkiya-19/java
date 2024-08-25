@@ -1,0 +1,2 @@
+System.out.print("")  // not ryt
+System.out.print("  "); // give 2 spaces 
