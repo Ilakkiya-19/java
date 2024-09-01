@@ -1,0 +1,39 @@
+import java.util.*;
+public class j1
+{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        System.out.print("enter size:");
+        int n=sc.nextInt();
+        int count=0;
+        for(int i=1;i<=n;i++)
+        {
+            if(i%2==1)                                //check num is odd or even [ if(i%2==0) means even if(i%2==1) means odd]
+            {
+                count=(i-1)*n;                       // count = (i-1)*n for ODD if i=1 means 1-1*=5;
+            }
+            else
+            {
+                count=i*n;                         // count=i*n for even num 1*2=2;
+            }
+            for(int j=1;j<=n;j++)
+            {
+                if(i%2==1)                         // if num=odd means then, ++count
+                {
+                    System.out.print(++count+" ");
+                }
+                else
+                {
+                    System.err.print(count--+" ");  // else num=even means then count--
+                }
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+
+diff between ++count and count++
+++ count means if i starts from 0 then it adds 1 and start from 1,2...
+count++ means if i starts from 0 then it add 0 then 1 like 0,1,2....
