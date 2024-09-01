@@ -27,7 +27,7 @@ public class j4
         int c2=0;
         for(int i=0;i<str.length();i++)
         {
-            if(str.charAt(i)=='*')
+            if(str.charAt(i)=='*')             // for char the quotes should be''  ---> single and for string it should be ""
             {
                 c1++;
             }
