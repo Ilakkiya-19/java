@@ -1,0 +1,28 @@
+import java.util.*;
+public class Classobj {
+    static Scanner sc=new Scanner(System.in);
+    String name;
+    int a;
+    int b;
+
+    public static int sum(int a, int b){
+        int c=a+b;
+        return c;
+     }
+     int c= sum(a,b);
+     public static void display(String name, int c){
+        System.out.println(name);
+        System.out.println(c);
+     }
+     public static void main(String[] args)
+     {
+        Classobj obj= new Classobj();
+        obj.name=sc.nextLine();
+        obj.a=sc.nextInt();
+        obj.b=sc.nextInt();
+        obj.c=obj.sum(obj.a,obj.b);
+        obj.display(obj.name,obj.c);
+
+
+     }
+}
