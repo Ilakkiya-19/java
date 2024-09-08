@@ -30,3 +30,47 @@ public class linear{
             }
     }
 }
+
+
+
+
+// find with index position
+
+
+import java.util.*;
+
+public class linear
+{
+    
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        System.out.println(" enter tg value:");
+        int target=sc.nextInt();
+        int index=-1;
+        int[] arr=new int[n];
+        System.out.println("enter the arr elements:");
+        for(int i=0;i<n;i++)
+        {
+            arr[i]=sc.nextInt();
+            if(target==arr[i])
+            {
+                index=i;
+                break;
+            }
+        }
+        
+        
+        if(index!=-1)
+        {
+            System.out.println("found"+index);
+        }
+        else
+        {
+            System.out.println("not found");
+        }
+    }
+}
+
+    
