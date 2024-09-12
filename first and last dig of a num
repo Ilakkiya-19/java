@@ -1,0 +1,24 @@
+import java.util.*;
+public class java
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the num:");
+        int n= sc.nextInt();
+        int first_dig=n;
+        while(first_dig>=10)
+        {
+            first_dig/=10;
+        }
+        System.out.println("the first dig of a num is:"+ first_dig);
+        int last_dig=n%10;
+        
+        // If the result is negative, adjust it to be positive
+        if (last_dig < 0) {
+            last_dig += 10;
+        }
+        
+        System.out.println("the last dig of a num is:"+ last_dig);
+    }
+}
