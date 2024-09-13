@@ -1,0 +1,14 @@
+import java.util.*;
+public class main
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("enter a num:");
+        int n=sc.nextInt();
+        System.out.print("enter the power of a num:");
+        double res=Math.pow(2,n);
+        System.out.print(" the power of n is:"+(int)res);
+       
+    }
+}
