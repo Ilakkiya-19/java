@@ -1,0 +1,14 @@
+public class Main {
+	public static void main(String[] args){
+		String str = "I LIKE THE SKY ";
+		System.out.println(str);
+		String str2 = "";
+		for (int i = str.length()-1; i>=0; i--) {
+			str2 += str.charAt(i);
+		}
+		System.out.println(str2);
+	}
+}
+
+I LIKE THE SKY 
+ YKS EHT EKIL I
