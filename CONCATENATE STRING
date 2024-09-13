@@ -1,0 +1,51 @@
+public class ConcatenateStrings
+{
+	public static void main(String[] args)
+	{
+		String str1 = "Concatenate";
+		String str2 = "Three";
+		String str3 = "Strings";
+	
+		String concatString = str1 + str2 + str3;
+		System.out.println("The concatenated string is: " + concatString);
+	}
+}
+
+
+
+
+public class ConcatenateStrings
+{
+	public static void main(String[] args)
+	{
+		String str1 = "Concatenate";
+		String str2 = "Strings";
+		
+		String concatString = str1.concat(str2);
+		System.out.println("The concatenated string is: " + concatString);
+	}
+}
+
+
+
+
+We can also concatenate more than two strings in a single line of code using the concat() method multiple times.
+
+
+public class ConcatenateStrings
+{
+	public static void main(String[] args)
+	{
+		String str1 = "Concatenate";
+		String str2 = "Three";
+		String str3 = "Strings";
+		String str4 = "Into";
+		String str5 = "One";
+		
+		String concatString = str1.concat(str2).concat(str3).concat(str4).concat(str5);
+		System.out.println("The concatenated string is: " + concatString);
+	}
+}
+
+
+
