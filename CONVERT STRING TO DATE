@@ -1,0 +1,13 @@
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
+public class demo
+{
+	public static void main(String[] args)
+	{
+		String strDate1 = "Friday, 23/07/2021";
+		DateTimeFormatter f1 = DateTimeFormatter.ofPattern("EEEE, d/M/yyyy");
+		LocalDate d1 = LocalDate.parse(strDate1, f1);
+		System.out.println(d1);
+	}
+}
