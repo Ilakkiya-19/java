@@ -1,0 +1,99 @@
+find the avg for elements inside the array:
+conditions: the num must be divisible by 3 AND even
+
+import java.util.*;
+public class main
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("enter a num:");
+        int n=sc.nextInt();
+        int[] arr=new int[n];
+        System.out.println("enter the array elements:");
+        for(int i=0;i<n;i++)
+        {
+            arr[i]=sc.nextInt();
+        }
+        int sum=0;
+        int count=0;
+        for(int i=0;i<n;i++)
+        {
+           if(arr[i]%2==0 && arr[i]%3==0)
+           {
+               sum=sum+arr[i];
+               count++;
+           }
+        }
+        if(count==0)
+        {
+            System.out.println("no element mataches");
+        }
+        else
+        {
+            int avg=sum/count;
+            System.out.println("the average"+avg);
+        }
+        
+    }
+}
+
+enter a num:3
+enter the array elements:
+1
+2
+3
+no element mataches
+
+find the avg for elements inside the array:
+conditions: the num must be divisible by 3 OR even
+
+
+import java.util.*;
+public class main
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("enter a num:");
+        int n=sc.nextInt();
+        int[] arr=new int[n];
+        System.out.println("enter the array elements:");
+        for(int i=0;i<n;i++)
+        {
+            arr[i]=sc.nextInt();
+        }
+        int sum=0;
+        int count=0;
+        for(int i=0;i<n;i++)
+        {
+           if(arr[i]%2==0 || arr[i]%3==0)
+           {
+               sum=sum+arr[i];
+               count++;
+           }
+        }
+        if(count==0)
+        {
+            System.out.println("no element mataches");
+        }
+        else
+        {
+            int avg=sum/count;
+            System.out.println("the average="+avg);
+        }
+        
+    }
+}
+
+
+
+enter a num:3
+enter the array elements:
+1
+2
+3
+the average=2
+
+
+
