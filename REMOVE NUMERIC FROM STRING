@@ -1,0 +1,27 @@
+public class Main {
+	public static void main(String[] args){
+		String str = "House123sector4";
+		System.out.println(str);
+		// Replacing 
+		str = str.replaceAll("\\d", "");
+		System.out.println("String only:");
+		System.out.println(str);
+	}
+}
+
+
+public class Main {
+	public static void main(String[] args){
+		String str = "House123sector4";
+		System.out.println(str);
+		// Replacing 
+		str = str.replaceAll("[0-9]", "");
+		System.out.println("String only:");
+		System.out.println(str);
+	}
+}
+
+
+House123sector4
+String only:
+Housesector
