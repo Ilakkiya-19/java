@@ -1,0 +1,16 @@
+public class Demo
+{	
+	public static void main(String[] args)
+	{
+		String name = "Justin";
+		int regno = 1001;
+		double marks = 15.21;
+		String summary = String.format("Student Name: %s %nReg.No: %d %nMarks: %f", name, regno, marks);
+		System.out.print(summary);
+	}
+}
+
+
+Student Name: Justin
+Reg.No: 1001
+Marks: 15.210000
