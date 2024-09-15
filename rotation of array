@@ -1,0 +1,35 @@
+import java.util.*;
+public class java
+{
+    public static void main(String[] args)
+    {
+        Scanner sc= new Scanner(System.in);
+        System.out.print("enter n:");
+        int n= sc.nextInt();
+        System.out.print("Enter the number of rotations:");
+        int rotation = sc.nextInt();
+        int [] arr=new int[n];
+        System.out.println("enter the array elements:");
+        for(int i=0;i<n;i++)
+        {
+            arr[i]=sc.nextInt();
+        }
+        rotation = rotation % n;
+        System.out.print("Rotated array: ");
+        for (int i = 0; i < n; i++) 
+        {
+            System.out.print(arr[(i + rotation) % n]);
+        }
+        System.out.println();
+    }
+}
+
+enter n:5
+Enter the number of rotations:2
+enter the array elements:
+1
+2
+3
+4
+5
+Rotated array: 34512
