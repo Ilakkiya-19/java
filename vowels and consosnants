@@ -1,0 +1,71 @@
+import java.util.*;
+public class p1 {
+    static Scanner sc= new Scanner(System.in);
+    public static void main(String[] args)
+    {
+        System.out.print("enter a string:");
+      String str=sc.nextLine().toLowerCase();               //.tolowercase means you dont have to give caps letters
+        
+        System.out.println(strvowel(str));
+    }
+
+    public static int strvowel(String str)
+    {
+        int vowels=0;
+        for(int i=0;i<str.length();i++)
+        {
+          char ch =str.charAt(i); 
+          if(ch=='A'||ch=='E'||ch=='I'||ch=='O'||ch=='U'|| ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u' )                //.tolowercase means you dont have to give caps letters
+            {
+                vowels++;
+            }
+        }
+        return vowels;
+        
+    }
+
+
+}
+
+
+
+
+
+
+          CONSONATS
+
+
+
+          import java.util.*;
+public class p1 {
+    static Scanner sc= new Scanner(System.in);
+    public static void main(String[] args)
+    {
+        System.out.print("enter a string:");
+        String str=sc.nextLine().toLowerCase();
+        
+        System.out.println(strvowel(str));
+    }
+
+    public static int strvowel(String str)
+    {
+        int vowels=0;
+        for(int i=0;i<str.length();i++)
+        {
+            char ch =str.charAt(i);
+          if(!( ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u') )                                // ONLY THIS LINE GET CHANGED INCLUDE ! NOT IN FRONT FOR CONSONANTS THATS ALL
+            {
+                vowels++;
+            }
+        }
+        return vowels;
+        
+    }
+
+
+}
+
+
+          enter a string:AEOFG
+          2------CONSONATS
+
