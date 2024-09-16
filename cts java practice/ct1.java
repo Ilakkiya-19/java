@@ -25,3 +25,15 @@ public class ct1
         return fuel;
     }
 }
+
+enter the no of litres to fill tank:
+20
+enter the distance
+150
+Distance in miles: 93.21
+Litres in gallons: 5.284
+Miles per gallon: 17.640045
+13.333334
+
+
+
