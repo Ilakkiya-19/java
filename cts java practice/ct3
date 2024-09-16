@@ -1,0 +1,67 @@
+// the error i did in this code :1. public static char not public ststic int (if u give int it passes only int value so char 2. return (char)n1  u should return the char value for digits.
+//3. in print statements-print all 4 dig individually.
+
+
+import java.util.*;
+public class ct3
+{
+    static Scanner sc=new Scanner(System.in);
+    public static void main(String[] args)
+    {
+        System.out.println(" enter the digit1:");
+        int n1=sc.nextInt();
+        System.out.println(" enter the digit2:");
+        int n2=sc.nextInt();
+        System.out.println(" enter the digit3:");
+        int n3=sc.nextInt();
+        System.out.println(" enter the digit4:");
+        int n4=sc.nextInt();
+        
+        System.out.println(n1 + "-" + digtochar(n1));
+        System.out.println(n2 + "-" + digtochar(n2));
+        System.out.println(n3 + "-" + digtochar(n3));
+        System.out.println(n4 + "-" + digtochar(n4));
+    }
+    public static char digtochar(int n1)
+    {
+        if(n1==65)
+        {
+            return 'A';
+        }
+        else if(n1==66)
+        {
+            return'B';
+        }
+        else if(n1==67)
+        {
+            return 'C';
+        }
+        else if(n1==68)
+        {
+            return 'D';
+        }
+        else
+        {
+            return(char) n1;
+            
+        }
+        
+    }
+}
+
+
+
+
+ enter the digit1:
+34
+ enter the digit2:
+70
+ enter the digit3:
+42
+ enter the digit4:
+72
+  
+34-"
+70-F
+42-*
+72-H
