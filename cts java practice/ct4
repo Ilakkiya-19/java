@@ -1,0 +1,68 @@
+// errors i did IF THERE IS VOID-NO RETURN STATEMENT VOID DONT RETURN ANYTHING SO IF YOU PUT INT STRING YOU MUST RETURN  A VALUE .
+System.out.print(highplace(n1,n2,n3));
+why we cant print like this for void its showing error
+The error occurs because System.out.print(highplace(n1, n2, n3)); expects highplace(n1, n2, n3) to return a value that can be printed, but highplace is defined as a void method. In Java, void methods do not return a value, so you cannot use them directly with System.out.print() or System.out.println() which are meant for printing values.
+
+WE SHOULD PRINT WITHOUT SYSTEM.OUT.PRINT OR PRINTLN FOR VOID 
+
+Here’s a breakdown of why it doesn't work and how you can correct it:
+Understanding void Methods
+void Methods: A void method does not return any value. It performs its task and then returns to the calling code. It’s suitable for cases where you want to perform actions (like printing results) without needing to return any value.
+
+Printing Values: Methods that return a value (e.g., int, String) can be used directly in print statements because the method call produces a value that System.out.print() or System.out.println() can output.
+
+
+
+
+  import java.util.*;
+public class ct4
+{
+    static Scanner sc=new Scanner(System.in);
+    public static void main(String[] args)
+    {
+        System.out.println(" enter the no of stud placed in cse:");
+        int n1=sc.nextInt();
+        System.out.println(" enter the num of stud placed in ece:");
+        int n2=sc.nextInt();
+        System.out.println(" enter the num of stud placed in mech:");
+        int n3=sc.nextInt();
+        
+        highplace(n1,n2,n3);
+    }
+    public static void highplace(int n1,int n2,int n3)
+    {
+        if(n1<0||n2<0||n3<0)
+        {
+            System.out.print("invalid");
+        }
+        else if(n1 == n2 && n2 == n3)
+        {
+            System.out.print("equal");
+        }
+        else if(n1>n2 && n1>n3)
+        {
+            System.out.print("cse has highest placement");
+        }
+        else if(n2>n1 && n2>n3)
+        {
+            System.out.print("ece has highest placement");
+        }
+        else
+        {
+            System.out.print("mech has highest placement");
+            
+        }
+        
+    }
+}
+
+
+
+
+enter the no of stud placed in cse:
+90
+ enter the num of stud placed in ece:
+70
+ enter the num of stud placed in mech:
+60
+cse has highest placement
