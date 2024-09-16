@@ -1,5 +1,5 @@
 // the error i did in this code :1. public static char not public ststic int (if u give int it passes only int value so char 2. return (char)n1  u should return the char value for digits.
-//3. in print statements-print all 4 dig individually.
+//3. in print statements-print all 4 dig individually. 4. return -'A' single quotes for char should be given otherwise it wont return your value.
 
 
 import java.util.*;
