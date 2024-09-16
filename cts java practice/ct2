@@ -1,0 +1,39 @@
+import java.util.*;
+public class ct2
+{
+    static Scanner sc=new Scanner(System.in);
+    public static void main(String[] args)
+    {
+        System.out.println("enter the no of pizzas bought:");
+        int n1 =sc.nextInt();
+        System.out.println("enter the no of puffs:");
+        int n2=sc.nextInt();
+        System.out.println("enter the no of cool drink:");
+        int n3=sc.nextInt();
+        System.out.println(bill( n1,n2,n3));
+    }
+    public static int bill(int n1,int n2, int n3)
+    {
+        int pizza=n1*100;
+        
+        int puffs=n2*20;
+        
+        int cooldrinks=n3*10;
+        
+        int total=pizza+puffs+cooldrinks;
+        System.out.println("total"+ total);
+        
+        return total;
+    }
+}
+
+
+
+enter the no of pizzas bought:
+10
+enter the no of puffs:
+12
+enter the no of cool drink:
+5
+total:1290
+1290
