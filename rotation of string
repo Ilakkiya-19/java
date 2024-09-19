@@ -1,0 +1,30 @@
+import java.util.*;
+public class j72
+{
+    static Scanner sc=new Scanner(System.in);
+    public static void main(String[] args)
+    {
+        System.out.println("enter the string:");
+        String str=sc.nextLine();
+        System.out.println(convert(str));
+    }
+
+    public static String convert(String str)
+    {
+        String result="";
+        for(int i=1;i<str.length();i++)
+        {
+            result+=str.charAt(i);
+
+        }
+        result+=str.charAt(0);
+        return result;
+    }
+
+}
+
+
+
+enter the string:
+abc
+bca
