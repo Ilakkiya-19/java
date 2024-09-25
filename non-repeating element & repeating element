@@ -1,0 +1,64 @@
+// Java program to find first non-repeating
+// element.
+class GFG {
+
+	static int firstNonRepeating(int arr[], int n)
+	{
+		for (int i = 0; i < n; i++) {
+			int j;
+			for (j = 0; j < n; j++)
+				if (i != j && arr[i] == arr[j])
+					break;
+			// if ith element is not present in array
+			// except at ith index then return element
+			if (j == n)
+				return arr[i];
+		}
+
+		return -1;
+	}
+	
+	public static void main(String[] args)
+	{
+
+		int arr[] = { 9, 4, 9, 6, 7, 4 };
+		int n = arr.length;
+
+		System.out.print(firstNonRepeating(arr, n));
+	}
+}
+
+
+
+6
+
+
+
+
+
+
+class java {
+
+    static int firstRepeating(int arr[], int n) {
+        
+        for (int i = 0; i < n; i++) {
+            for (int j = i + 1; j < n; j++) {
+                if (arr[i] == arr[j]) {
+                    return arr[i];
+                }
+            }
+        }
+        return -1;
+    }
+    public static void main(String[] args) {
+        int arr[] = { 9, 4, 9, 6, 7, 4 };
+        int n = arr.length;
+
+        System.out.print(firstRepeating(arr, n));
+    }
+}
+
+
+
+
+9
