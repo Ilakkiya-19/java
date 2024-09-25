@@ -20,3 +20,39 @@ public class Main{
         
     }
 }
+
+
+IN FUNCTION
+
+
+import java.util.*;
+public class java
+{
+    static Scanner sc=new Scanner(System.in);
+    public static void main(String[] args)
+    {
+       System.out.print("enter the number:");
+       int n=sc.nextInt();
+       System.out.print(pali(n));
+    }
+    
+    public static boolean pali(int n)
+    {
+        int org=n;
+        int rev=0;
+        while(n>0)
+        {
+            int dig=n%10;
+            rev=rev*10+dig;
+            n=n/10;
+        }
+        if(org==rev)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+}
