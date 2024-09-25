@@ -1,0 +1,66 @@
+import java.util.*;
+public class java
+{
+    static Scanner sc=new Scanner(System.in);
+    public static void main(String[] args)
+    {
+        System.out.print("enter the size:");
+        int n=sc.nextInt();
+        System.out.println("enter the elements:");
+        long[] arr=new long[n];
+        for(int i=0;i<n;i++)
+        {
+            arr[i]=sc.nextInt();
+        }
+        System.out.println(equilibriumindex( arr, n));
+    }
+    
+    public static int equilibriumindex(long[] arr,int n)
+    {
+        long leftsum;long rightsum;
+        for(int i=0;i<n;i++)
+        {
+            leftsum=0;
+            for(int j=0;j<i;j++)
+            {
+                leftsum+=arr[j];
+            }
+            rightsum=0;
+            for(int j=i+1;j<n;j++)
+            {
+                rightsum+=arr[j];
+            }
+            if(leftsum==rightsum)
+            {
+                return i+1;
+            }
+            
+        }
+        return -1;
+        
+    }
+}
+
+
+enter the size:7
+enter the elements:
+-7
+1
+5
+2
+-4
+3
+0
+
+output: 4
+
+
+Input: arr[] = {-7, 1, 5, 2, -4, 3, 0} 
+Output: 4 
+Explanation: In 1-based indexing, 4 is an equilibrium index, because: arr[1] + arr[2] + arr[3] = arr[5] + arr[6] + arr[7] 
+
+
+Input: arr[] = {1, 2, 3} 
+Output: -1 
+Explanation: There is no equilibrium index in the array.
+
