@@ -1,0 +1,93 @@
+Input: arr1[] = {11, 1, 13, 21, 3, 7}, arr2[] = {11, 3, 7, 1} 
+Output: Yes
+
+Input: arr1[] = {1, 2, 3, 4, 5, 6}, arr2[] = {1, 2, 4} 
+Output: Yes
+
+Input: arr1[] = {10, 5, 2, 23, 19}, arr2[] = {19, 5, 3} 
+Output: No
+
+// errors i did:   
+Issues in Your Code
+Subset Logic:
+
+The current logic in the subset method checks if elements from arr1 are present in arr2. Instead, it should check if all elements of arr2 are present in arr1.
+for(int i=0; i<n1; i++) { // This should iterate over arr2, not arr1
+Inner Loop Logic:
+
+The inner loop looks for arr2[i] in arr1[j], which is incorrect. It should check if arr2[j] is found in arr1.
+if(arr2[i] == arr1[j]) // This should compare arr2[j] with arr1[i]
+
+
+
+for (int i = 0; i < n2; i++) { // Loop through arr2                 not i<n1 it should be n2
+    boolean found = false;
+    for (int j = 0; j < n1; j++) { // Check against arr1            not j<n2 it should be n1
+        if (arr2[i] == arr1[j]) {                                   check this too                                  
+            found = true;
+            break;
+        }
+    }
+
+
+
+
+
+
+import java.util.*;
+public class java
+{
+    static Scanner sc=new Scanner(System.in);
+    public static void main(String[] args)
+    {
+        System.out.print("enter the size1:");
+        int n1=sc.nextInt();
+        System.out.println("enter the elements:");
+        long[] arr1=new long[n1];
+        for(int i=0;i<n1;i++)
+        {
+            arr1[i]=sc.nextInt();
+        }
+        System.out.print("enter the size2:");
+        int n2=sc.nextInt();
+        System.out.println("enter the elements:");
+        long[] arr2=new long[n2];
+        for(int i=0;i<n2;i++)
+        {
+            arr2[i]=sc.nextInt();
+        }
+        if(subset( arr1,arr2,n1, n2))
+        {
+            System.out.print("yes");
+        }
+        else
+        {
+            System.out.print("no");
+        }
+    }
+    
+    public static boolean subset(long[] arr1,long[] arr2,int n1,int n2)
+    {
+        for(int i=0;i<n2;i++)
+        {
+            boolean found=false;
+            for(int j=0;j<n1;j++)
+            {
+                if(arr2[i]==arr1[j])
+                {
+                    found=true;
+                    break;
+                }
+            }
+            if(!found)
+            return false;
+            
+        }
+        return true;
+        
+    }
+}
+
+
+
+
