@@ -1,0 +1,50 @@
+import java.util.*;
+public class java
+{
+    static Scanner sc=new Scanner(System.in);
+    public static void main(String[] args)
+    {
+        System.out.println("enter the num:");
+        int n=sc.nextInt();
+        fibbo(n);
+    }
+    
+    public static void fibbo(int n)
+    {
+        int n1=0,n2=1,n3;
+        int sum=n1+n2;
+        System.out.println(n1 + " " + n2);
+        for(int i=1;i<n;i++)
+        {
+            n3=n1+n2;
+            System.out.print(" "+n3);
+            n1=n2;
+            n2=n3;
+            sum=sum+n3;
+            System.out.println("Sum of Fibonacci Series up to " + n + ": " + sum);
+        }
+        System.out.println();
+        
+    }
+    
+}
+
+
+
+
+enter the num:
+4
+0 1
+ 1Sum of Fibonacci Series up to 4: 2
+ 2Sum of Fibonacci Series up to 4: 4
+ 3Sum of Fibonacci Series up to 4: 7
+
+
+ Input  : n = 3
+Output : 4
+Explanation : 0 + 1 + 1 + 2  = 4
+
+
+Input  :  n = 4
+Output :  7
+Explanation : 0 + 1 + 1 + 2 + 3  = 7
