@@ -1,0 +1,52 @@
+import java.util.*;
+public class java
+{
+    static Scanner sc=new Scanner(System.in);
+    public static void main(String[] args)
+    {
+        System.out.println("enter the n:");
+        int n=sc.nextInt();
+        System.out.print("target:");
+        int target=sc.nextInt();
+        System.out.println("enter the array elements:");
+        int[] arr=new int[n];
+        for(int i=0;i<n;i++)
+        {
+            arr[i]=sc.nextInt();
+        }
+        int index = findindex(n,target,arr);
+        if (index != -1) 
+        {
+            System.out.println("The index of the target element is: " + index);
+        } else 
+        {
+            System.out.println("Target element not found in the array.");
+        }
+    }
+    public static int findindex(int n,int target,int arr[])
+        {
+            for(int i=0;i<n;i++)
+            {
+                if(arr[i]==target)
+                {
+                    return i;
+                }
+            }
+            return -1;
+        }
+}
+
+
+
+enter the n:
+7
+target:0
+enter the array elements:
+4
+5
+6
+7
+0
+1
+2
+The index of the target element is: 4
