@@ -20,3 +20,35 @@ public class java
 
 n=5
 o/p=120
+
+
+
+
+sum of the factorial 
+
+
+import java.util.*;
+public class java
+{
+    static Scanner sc=new Scanner(System.in);
+    public static void main(String[] args)
+    {
+        int n=sc.nextInt();
+        System.out.println(factorial(n));
+    }
+    public static int factorial(int n)
+    {
+        int fact=1;
+        int sum=1;                             // if i give sum =0, then the loop starts from 1, so it doesn't count 0! the the sum of factorial of 5 will be 153. so to consider 0! also sum should be initialised as sum=1
+        for(int i=1;i<=n;i++)
+        {
+            fact*=i;
+            sum=sum+fact;
+        }
+        return sum;
+    }
+}
+
+
+n=5
+sum of factorial=154
