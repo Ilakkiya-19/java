@@ -1,0 +1,22 @@
+import java.util.*;
+public class java
+{
+    static Scanner sc=new Scanner(System.in);
+    public static void main(String[] args)
+    {
+        int n=sc.nextInt();
+        System.out.println(factorial(n));
+    }
+    public static int factorial(int n)
+    {
+        int fact=1;
+        for(int i=1;i<=n;i++)
+        {
+            fact*=i;
+        }
+        return fact;
+    }
+}
+
+n=5
+o/p=120
