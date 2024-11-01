@@ -1,0 +1,91 @@
+Input arrays: arr1 = [1, 2, 3] and arr2 = [4, 5, 6]
+Correct calculation:
+4 - 1 = 3
+5 - 2 = 3
+6 - 3 = 3
+Total: 3 + 3 + 3 = 9
+
+
+
+
+import java.util.*;
+public class jaav{
+    static Scanner sc=new Scanner(System.in);
+    public static void main(String[] args) 
+    {
+       int n1=sc.nextInt();
+       int[] arr1=new int[n1];
+       for(int i=0;i<n1;i++)
+       {
+           arr1[i]=sc.nextInt();
+       }
+       
+       int n2=sc.nextInt();
+       int[] arr2=new int[n2];
+       for(int j=0;j<n2;j++)
+       {
+           arr2[j]=sc.nextInt();
+       }
+       
+        if (n1 != n2) {
+            System.out.println("Arrays must be of the same length.");
+            return; // Exit if lengths are different
+        }
+       System.out.println(arra(n1,arr1,n2,arr2));
+    }
+    
+    public static int arra(int n1,int[] arr1,int n2,int[] arr2)
+    {
+        int res=0;
+        for(int i=0;i<n1;i++)
+        {
+            res+=arr2[i]-arr1[i];                            // error i did: only one loop which is i no need of j loop or nested loop
+        }
+        return res;
+    }
+    
+}
+
+
+error: original code
+
+public static int arra(int n1, int[] arr1, int n2, int[] arr2) {
+    int res = 0;
+    for (int i = 0; i < n1; i++) {
+        for (int j = 0; j < n2; j++) {
+            res += arr2[i] - arr1[i];
+        }
+    }
+    return res;
+}
+
+
+corrected code:
+
+Nested Loop:
+
+You have two nested loops (for (int i = 0; i < n1; i++) and for (int j = 0; j < n2; j++)).
+This means that for each index i, you are looping through every index j of the second array, which results in multiple calculations of the same difference arr2[i] - arr1[i].
+Specifically, for each i, the difference is calculated n2 times (once for each j), leading to the result being multiplied by n2.
+
+
+for (int i = 0; i < n1; i++) {
+    res += arr2[i] - arr1[i];
+}
+
+
+
+Given your example:
+
+Input arrays: arr1 = [1, 2, 3] and arr2 = [4, 5, 6]
+Correct calculation:
+4 - 1 = 3
+5 - 2 = 3
+6 - 3 = 3
+Total: 3 + 3 + 3 = 9
+
+the error output =27
+the correct output =9
+
+
+
