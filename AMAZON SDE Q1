@@ -42,6 +42,7 @@ public class jaav{
             res+=arr2[i]-arr1[i];                            // error i did: only one loop which is i no need of j loop or nested loop
         }
         return res;
+        return Math.abs(res); // Return the absolute value of the result  // this to to get the res in positive
     }
     
 }
