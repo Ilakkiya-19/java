@@ -1,0 +1,138 @@
+Inheritance is an object-oriented programming concept in which one class acquires the properties and behavior of another class. 
+It represents a parent-child relationship between two classes. This parent-child relationship is also known as an IS-A relationship.
+
+ How is inheritance achieved in Java?
+In Java, inheritance is achieved using the extends keyword to indicate that one class inherits from another. The subclass inherits all non-private members (fields and methods) of the superclass.
+
+A subclass, also known as child class or derived class, is the class that inherits the properties and behaviors of another class.
+So, if A and B are two classes and if B class inherits A class, then the B class is called the subclass Superclass
+
+A superclass, also known as parent class or base class, is the class whose properties and behaviors are inherited by the subclass.
+So, if A and B are two classes and if B class inherits A class, then A class is called the superclass.
+
+What is the super keyword in Java?
+The super keyword in Java is used to access members of the superclass from within the subclass. 
+It can be used to invoke the superclass constructor or methods, as well as to differentiate between superclass and subclass members with the same name.
+
+
+                                                           SHAPE(SUPER CLASS)
+                                    RECTANGLE(SUB CLASS)      TRIANGLE(SUB CLASS)       CIRCLE(SUB CLASS)
+
+Advantages of Inheritance:
+Code Reusability: Once a method is written in the superclass, it can be used by all subclasses.
+Easier Maintenance: Changes made to the superclass will propagate to all subclasses, making the system easier to maintain.
+Extensibility: You can add new features to a class without modifying the existing code (using subclassing).
+
+Types of Inheritance in Java
+Single Inheritance
+Multi-level Inheritance
+Hierarchical Inheritance
+Hybrid Inheritance
+
+
+Single Inheritance
+Single inheritance in Java refers to the inheritance relationship where a subclass extends only one superclass. Here’s an example demonstrating single inheritance.
+
+class Animal {
+    void eat() {
+        System.out.println("Eating...");
+    }
+}
+
+class Dog extends Animal {
+    void bark() {
+        System.out.println("Barking...");
+    }
+}
+
+
+
+Multi-level Inheritance
+Multi-level inheritance in Java refers to a scenario where a class inherits properties and behaviors from another class, which in turn inherits from another class. 
+This creates a hierarchical structure of classes where each class inherits from the one above it.
+
+
+class Animal {
+    void eat() {
+        System.out.println("Eating...");
+    }
+}
+
+class Dog extends Animal {
+    void bark() {
+        System.out.println("Barking...");
+    }
+}
+
+class Puppy extends Dog {
+    void play() {
+        System.out.println("Playing...");
+    }
+}
+
+
+
+
+Hierarchical Inheritance
+Hierarchical inheritance in Java refers to a scenario where multiple classes inherit properties and behaviors from a single parent class. 
+In this inheritance structure, there is one parent class and multiple child classes that inherit from it.
+
+
+class Animal {
+    void eat() {
+        System.out.println("Eating...");
+    }
+}
+
+class Dog extends Animal {
+    void bark() {
+        System.out.println("Barking...");
+    }
+}
+
+class Cat extends Animal {
+    void meow() {
+        System.out.println("Meowing...");
+    }
+}
+
+
+
+
+
+
+Hybrid Inheritance: This is a combination of two or more types of inheritance (not directly supported in Java through classes, but can be simulated using interfaces).
+
+
+Overriding Methods in Inheritance:
+In Java, a subclass can override methods of its superclass. To override a method, the subclass must define a method with the same signature (name, return type, and parameters) as the method in the superclass.
+
+@Override Annotation: This annotation is optional but highly recommended, as it ensures you are correctly overriding a method from the superclass.
+
+class Animal {
+    void sound() {
+        System.out.println("Some animal makes a sound");
+    }
+}
+
+class Dog extends Animal {
+    @Override
+    void sound() {
+        System.out.println("Dog barks");
+    }
+}
+
+public class Test {
+    public static void main(String[] args) {
+        Animal a = new Dog();
+        a.sound();  // Output: Dog barks
+    }
+}
+
+
+
+In this example, the method sound() in the Dog class overrides the sound() method in the Animal class.
+
+
+
+
