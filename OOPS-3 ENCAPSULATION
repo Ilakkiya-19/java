@@ -1,4 +1,5 @@
-hiding the sensitive data 
+Data Encapsulation can be defined as wrapping the code or methods(properties) and the related fields or variables together as a single unit. In object-oriented programming, we call this single unit – a class, interface, etc. 
+We can visualize it like a medical capsule (as the name suggests, too), wherein the enclosed medicine can be compared to fields and methods of a class.
 Setter and Getter Method
 Getter and setter methods are used to access and modify the private variables (fields) of a class, respectively. They help achieve encapsulation by providing controlled access to the class’s attributes.
 It refers to the concept of hiding the implementation details of a class’s attributes (data) and exposing only the necessary information or interfaces to interact with those attributes.
