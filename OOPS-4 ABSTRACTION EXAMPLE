@@ -1,0 +1,164 @@
+Abstraction in Java refers to hiding the implementation details of a code and exposing only the necessary information to the user. 
+It provides the ability to simplify complex systems by ignoring irrelevant details and reducing complexity. Java provides many in-built abstractions and few tools to create our own.
+
+Abstraction in Java can be achieved using the following tools it provides
+Abstract classes
+Interfaces
+
+Abstraction in the real world Example
+Making coffee with a coffee machine is a good example of abstraction. 
+You need to know how to use your coffee machine to make coffee. You need to provide water and coffee beans, switch it on and select the kind of coffee you want to get.
+
+In Java, an abstract class is a class that cannot be instantiated on its own and typically serves as a blueprint for other classes. Abstract classes are declared using the abstract keyword. It can contain abstract methods (methods without a body) as well as concrete methods (methods with a body).
+Abstract classes are used when you want to provide a common interface for a group of related classes, but you want to leave some methods to be implemented by the subclasses.
+
+
+ABSTRACT CLASS EXAMPLE
+
+abstract class Animal {
+    abstract void makeSound();  // Abstract method
+
+    void sleep() {  // Non-abstract method
+        System.out.println("Sleeping...");
+    }
+}
+
+
+ANOTHER EXAMPLE
+
+abstract class Shape {
+    // Abstract method (does not have a body)
+    public abstract double area();
+
+    // Concrete method (has a body)
+    public void display() {
+        System.out.println("This is a shape.");
+    }
+}
+
+class Rectangle extends Shape {
+    private double length;
+    private double width;
+
+    public Rectangle(double length, double width) {
+        this.length = length;
+        this.width = width;
+    }
+
+    // Implementing abstract method
+    public double area() {
+        return length * width;
+    }
+}
+
+class Circle extends Shape {
+    private double radius;
+
+    public Circle(double radius) {
+        this.radius = radius;
+    }
+
+    // Implementing abstract method
+    public double area() {
+        return Math.PI * radius * radius;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Shape rect = new Rectangle(5, 4);
+        Shape circle = new Circle(3);
+
+        rect.display();
+        System.out.println("Area of rectangle: " + rect.area());
+
+        circle.display();
+        System.out.println("Area of circle: " + circle.area());
+    }
+}
+
+
+This is a shape.
+Area of rectangle: 20.0
+This is a shape.
+Area of circle: 28.274333882308138
+
+
+
+
+
+ABSTRACT METHOD 
+
+An abstract method is a method declared in an abstract class that does not have a body (implementation). 
+The subclasses of the abstract class are required to provide their own implementation of the abstract method.
+It is essentially a placeholder for functionality that will be provided by the subclasses.
+
+
+No body/implementation: It only has a method signature and no body.
+Must be overridden: Any class inheriting the abstract class must provide an implementation of the abstract method (unless that class is also abstract).
+Defined in abstract classes: Abstract methods are always declared inside abstract classes or interfaces.
+
+abstract class Animal {
+    abstract void makeSound();  // Abstract method with no body
+}
+
+
+
+
+ANOTHER EXAMPLE
+
+abstract class Animal {
+    // Abstract method (does not have a body)
+    public abstract void makeSound();
+
+    // Concrete method
+    public void sleep() {
+        System.out.println("Zzz");
+    }
+}
+
+class Dog extends Animal {
+    // Implementing abstract method
+    public void makeSound() {
+        System.out.println("Woof");
+    }
+}
+
+class Cat extends Animal {
+    // Implementing abstract method
+    public void makeSound() {
+        System.out.println("Meow");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal dog = new Dog();
+        Animal cat = new Cat();
+
+        dog.makeSound(); // Output: Woof
+        cat.makeSound(); // Output: Meow
+
+        dog.sleep(); // Output: Zzz
+        cat.sleep(); // Output: Zzz
+    }
+}
+Java
+Output
+
+Woof
+Meow
+Zzz
+Zzz
+
+
+
+
+
+Difference Between Abstract Class and Abstract Method:
+Feature                                                                              Abstract Class	                                                                   Abstract Method
+Definition	                                                     A class that cannot be instantiated and may have abstract methods.	               A method without a body that must be implemented by subclasses.
+Instantiation	                                                   Cannot be instantiated directly.                                               It is inherited.	Not applicable. It's a method in an abstract class.
+Purpose	                                                         Provides a base for other classes to inherit from.	                            Defines a method signature that must be implemented by subclasses.
+Implementation	                                                 May contain both abstract and non-abstract methods.	                            Does not contain any code (no body), only the signature.
+Can contain fields?	                                             Yes, abstract classes can contain variables.                                      	No, abstract methods are just method declarations.
