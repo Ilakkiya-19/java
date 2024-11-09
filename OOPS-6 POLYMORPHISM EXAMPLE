@@ -1,0 +1,82 @@
+Polymorphism allows us to perform a single action in different ways. 
+In other words, polymorphism allows you to define one interface and have multiple implementations. The word “poly” means many and “morphs” means forms, So it means many forms.
+
+Real-Life Examples of Polymorphism
+An individual can have different relationships with different people. A woman can be a mother, a daughter, a sister, and a friend, all at the same time, i.e. she performs other behaviors in different situations.
+
+The human body has different organs. Every organ has a different function to perform; the heart is responsible for blood flow, the lungs for breathing, the brain for cognitive activity, and the kidneys for excretion. 
+So we have a standard method function that performs differently depending upon the organ of the body.
+
+
+Types of Java Polymorphism
+In Java Polymorphism is mainly divided into two types:
+
+Compile-time Polymorphism
+Runtime Polymorphism
+
+Compile-Time Polymorphism in Java
+It is also known as static polymorphism. This type of polymorphism is achieved by function overloading.
+
+Method Overloading
+Method overloading in Java refers to the ability to define multiple methods in the same class with the same name but with different parameters. 
+Java compiler differentiates these methods based on the number of parameters or the data types of parameters.
+Overloading is compile-time polymorphism, where method behavior is determined at compile time based on method signatures.
+
+
+
+class Calculator {
+    // Overloaded method for adding two integers
+    int add(int a, int b) {
+        return a + b;
+    }
+
+    // Overloaded method for adding two doubles
+    double add(double a, double b) {
+        return a + b;
+    }
+}
+
+public class Test {
+    public static void main(String[] args) {
+        Calculator calc = new Calculator();
+        System.out.println(calc.add(2, 3));      // Calls add(int, int)
+        System.out.println(calc.add(2.5, 3.5));  // Calls add(double, double)
+    }
+}
+
+
+
+Runtime Polymorphism in Java
+It is also known as Dynamic Method Dispatch. It is a process in which a function call to the overridden method is resolved at Runtime. This type of polymorphism is achieved by Method Overriding.
+
+Method Overriding
+Method overriding in Java occurs when a subclass provides a specific implementation of a method that is already defined in its superclass. 
+The method in the subclass should have the same name, return type, and parameter list as the method in the superclass. Method overriding is used to provide specific behavior for a method in a subclass.
+Overriding is runtime polymorphism, where method behavior is determined at runtime, and the method of the subclass is executed.
+
+
+
+class Animal {
+    void sound() {
+        System.out.println("Animal makes a sound");
+    }
+}
+
+class Dog extends Animal {
+    @Override
+    void sound() {
+        System.out.println("Dog barks");
+    }
+}
+
+public class Test {
+    public static void main(String[] args) {
+        Animal myDog = new Dog();
+        myDog.sound();  // Calls overridden method in Dog class
+    }
+}
+
+
+Summary:
+Overloading: Multiple methods with the same name but different parameters.
+Overriding: A subclass provides its own implementation of a method already defined in the superclass.
