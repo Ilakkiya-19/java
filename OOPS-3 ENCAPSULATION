@@ -1,0 +1,73 @@
+hiding the sensitive data 
+Setter and Getter Method
+Getter and setter methods are used to access and modify the private variables (fields) of a class, respectively. They help achieve encapsulation by providing controlled access to the class’s attributes.
+It refers to the concept of hiding the implementation details of a class’s attributes (data) and exposing only the necessary information or interfaces to interact with those attributes.
+Data hiding is achieved by declaring class attributes as private, meaning they are accessible only within the class itself. Outside classes cannot directly access or modify these private attributes. 
+Instead, interactions with these attributes are typically mediated through public methods such as getters and setters, which provide controlled access to the data.
+
+Advantages of Encapsulation
+Encapsulation offers several advantages, which can be summarized in bullet points:
+
+Data Hiding: Encapsulation hides the internal state of objects by making fields private, preventing direct access from outside the class.
+Enhanced Security: With encapsulation, sensitive data can be protected from unauthorized access and modification, enhancing security.
+Modularity and Maintainability: Encapsulation promotes modularity by isolating the implementation details within a class, making it easier to understand, maintain, and modify the codebase.
+Code Reusability: Encapsulation encourages code reuse by allowing classes to be used as components in larger systems without exposing their internal workings.
+Easier Testing: Encapsulation facilitates unit testing by providing clear boundaries between different components of the system, allowing for easier isolation and testing of individual units.
+Flexibility and Evolution: Encapsulation provides flexibility in changing the internal implementation of a class without affecting its external interface, enabling the evolution of the codebase over time.
+Reduced Coupling: Encapsulation reduces coupling between different parts of the system by limiting dependencies on the internal implementation of classes, promoting a more loosely coupled architecture.
+Encapsulation of Invariants: Encapsulation allows the encapsulation of invariants and business rules within a class, ensuring that data remains consistent and valid throughout its lifecycle.
+Facilitates Abstraction: Encapsulation facilitates abstraction by exposing only essential information through well-defined interfaces, hiding unnecessary details and complexity from the users of the class.
+Supports Information Hiding: Encapsulation supports the principle of information hiding, enabling classes to hide their internal implementation details while providing a clear and consistent interface to interact with.
+
+
+
+EXAMPLE CODE
+
+
+public class Person {
+    private String name;             // private attribute
+    private int age;                 // private attribute
+
+    // Getter for name
+    public String getName() {
+        return name;
+    }
+
+    // Setter for name
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    // Getter for age
+    public int getAge() {
+        return age;
+    }
+
+    // Setter for age
+    public void setAge(int age) {
+        this.age = age;
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Person person = new Person();
+
+        // Set values using setter methods
+        person.setName("John");
+        person.setAge(30);
+
+        // Retrieve values using getter methods
+        System.out.println("Name: " + person.getName());
+        System.out.println("Age: " + person.getAge());
+    }
+}
+Name: John
+Age: 30
+
+
+
+Private Attributes: Attributes of a class are declared as private to restrict direct access from outside the class.
+
+Public Methods: Public methods, such as getters and setters, are provided to access and modify the private attributes.
+
+
