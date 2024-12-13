@@ -1,0 +1,59 @@
+import java.util.*;
+public class Main
+{
+    static Scanner sc=new Scanner(System.in);
+    public static void main(String[] args)
+    {
+        System.out.print("enter the size:");
+        int n=sc.nextInt();
+         System.out.print("enter the elements:");
+         int[] arr=new int[n];
+         for(int i=0;i<n;i++)
+         {
+             arr[i]=sc.nextInt();
+         }
+         for(int i=0;i<n;i++)
+         {
+            prime(arr[i]); 
+         }
+         
+    }
+    public static void prime(int num)
+    {
+        int count=0;
+        if(num<=1)
+        {
+            System.out.println("invalid");
+        }
+        else
+        {
+            for(int j=2;j<=num/2;j++)
+            {
+                if(num%j==0)
+                {
+                    count++;
+                }
+            }
+            if(count==0)
+            {
+                System.out.println(" prime");
+                
+            }
+            else
+            {
+                System.out.println("composite");
+                
+            }
+        }
+        
+    }
+}
+
+
+enter the size:5
+enter the elements:0 -1 7 9 81
+invalid
+invalid
+ prime
+composite
+composite
