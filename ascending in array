@@ -1,0 +1,34 @@
+public class AddAndSortArrays {
+    public static void main(String[] args) {
+        int[] arr1 = {5, 2, 8, 1};
+        int[] arr2 = {3, 7, 4, 6};
+        int[] combined = new int[arr1.length + arr2.length];
+        int index = 0;
+
+        // Adding arr1 elements
+        for (int i = 0; i < arr1.length; i++) {
+            combined[index++] = arr1[i];
+        }
+
+        // Adding arr2 elements
+        for (int i = 0; i < arr2.length; i++) {
+            combined[index++] = arr2[i];
+        }
+
+        // Sorting in ascending order
+        for (int i = 0; i < combined.length; i++) {
+            for (int j = i + 1; j < combined.length; j++) {
+                if (combined[i] > combined[j]) {
+                    int temp = combined[i];
+                    combined[i] = combined[j];
+                    combined[j] = temp;
+                }
+            }
+        }
+
+        // Displaying the sorted array
+        for (int i = 0; i < combined.length; i++) {
+            System.out.print(combined[i] + " ");
+        }
+    }
+}
