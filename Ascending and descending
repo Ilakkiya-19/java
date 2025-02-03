@@ -1,0 +1,56 @@
+get 2 arrays combine both ararys and sort in ascending order
+
+
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter n1:");
+        int n1=sc.nextInt();
+        System.out.println("enter arr1:");
+        int[] arr1=new int[n1];
+        for(int i=0;i<n1;i++)
+        {
+            arr1[i]=sc.nextInt();
+        }
+        System.out.println("enter n2:");
+        int n2=sc.nextInt();
+        System.out.println("enter arr2:");
+        int[] arr2=new int[n2];
+        for(int i=0;i<n2;i++)
+        {
+            arr2[i]=sc.nextInt();
+        }
+        int[] result=new int[n1+n2];
+        for(int i=0;i<n1;i++)
+        {
+            result[i]=arr1[i];
+        }
+        for(int i=0;i<n2;i++)
+        {
+            result[n1+i]=arr2[i];
+        }
+        
+        for (int i = 0; i < result.length - 1; i++)
+        {
+            for (int j = 0; j < result.length - 1 - i; j++) 
+            {
+                if (result[j] > result[j + 1])                                                      // for descending just change this line:if (result[j] < result[j + 1]) 
+                {
+                    int temp = result[j];
+                    result[j] = result[j + 1];
+                    result[j + 1] = temp;
+                }
+            }
+        }
+        System.out.println("Sorted merged array:");
+        for (int i = 0; i < result.length; i++) 
+        {
+            System.out.print(result[i] + " ");
+        }
+        
+    }
+}
