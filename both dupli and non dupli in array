@@ -1,39 +1,50 @@
 import java.util.*;
 public class Main
 {
-    static Scanner sc=new Scanner(System.in);
-    public static void main(String[] args) 
+    public static void main(String[] args)
     {
-        System.out.println("Enter Size Of Array = ");
-        int n=sc.nextInt();
-        int[] arr= new int[n];
-        int count=0;
-        int i;
-        for(i=0;i<n;i++)
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter n1:");
+        int n1=sc.nextInt();
+        System.out.println("enter arr1:");
+        int[] arr1=new int[n1];
+        for(int i=0;i<n1;i++)
         {
-               arr[i]=sc.nextInt();
+            arr1[i]=sc.nextInt();
         }
-        Arrays.sort(arr);
-        i=0;
-        while(i<n-1)
+        for(int i=0;i<n1;i++)
         {
-            if(arr[i]==arr[i+1])
+            int count=0;
+            for(int j=0;j<i;j++)
             {
-                count++;
-            }
-            else
-            {
-                count=0;
+                if(arr1[i]==arr1[j])
+                {
+                    count++;
+                }
             }
             if(count==0)
             {
-                System.out.println("NON DUPE:"+arr[i]);
+                System.out.println(arr1[i]+" -not dupe");
             }
-            if(count==1)
+            else if(count==1)
             {
-                System.out.println("DUPE:"+arr[i]);
+                System.out.println(arr1[i]+" -dupe");
             }
-            i++;
         }
     }
 }
+
+
+
+enter n1:
+4
+enter arr1:
+1
+1
+2
+3
+
+1 -not dupe
+1 -dupe
+2 -not dupe
+3 -not dupe
